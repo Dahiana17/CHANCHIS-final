@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login SHAKE</title>
+  <link rel="stylesheet" href="acceso_account.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<main>
+
+<section class="home">
+    <header class="main-head">
+        <div class="container">
+            <div class="main-menu">
+                <div class="logo">
+                    <span>CHANCHIS</span>
+                </div>
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-list-item">
+                            <a href="index.html" class="nav-link">Inicio</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a href="VIP.html" class="nav-link">VIP</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a href="registro.html" class="nav-link">Registro</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a href="Contact.html" class="nav-link">Contactanos</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+
+ <div class="container_con">
+    <div class="left-panel">
+      <div class="profile-header">
+        <div class="photo">
+            <img src="pictures/user.png" style="height: 52px; width: 52px;">
+        </div>
+        <div>
+          <div>HOLA,</div>
+          <div><b>DAHIANA MARIN</b></div>
+        </div>
+      </div>
+      <div class="user-info">
+        EDAD: 18 Años<br>
+        SEXO: F<br>
+        TEL: 123 456 789<br>
+        ID: 9876543211<br>
+        SUSCRIPCIÓN: <b>Platino</b>
+      </div>
+
+     <div class="calendar-container">
+        <div class="calendar-header">
+          <button onclick="changeMonth(-1)">←</button>
+          <div id="monthYear"></div>
+          <button onclick="changeMonth(1)">→</button>
+        </div>
+        <div class="calendar-days">
+          <div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div><div>Su</div>
+        </div>
+        <div class="calendar-dates" id="calendarDates"></div>
+      </div>
+      <button class="add-event">+ AÑADIR EVENTO</button>
+    </div>
+
+    <div class="right-panel">
+      <div class="meta">
+        <div class="progress" id="progresoMeta">00/10 HORAS</div>
+        <div>PROGRESO META</div>
+      </div>
+      <div class="total">
+        <div class="progress" id="totalMes">000 HORAS</div>
+        <div>TIEMPO TOTAL MES</div>
+      </div>
+  </div>
+
+
+
+<div id="eventModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <h2>Agregar Evento</h2>
+    <form id="eventForm">
+      <label for="tipo">Tipo de ejercicio:</label><br>
+        <select id="tipo" name="tipo" required>
+          <option value="" disabled selected>Seleccione una opción</option>
+          <option value="Cardio">Cardio</option>
+          <option value="Fuerza">Fuerza</option>
+          <option value="Flexibilidad">Flexibilidad</option>
+          <option value="Yoga">Yoga</option>
+          <option value="Otro">Otro</option>
+        </select><br><br>
+
+
+      <label for="fecha">Fecha:</label><br>
+      <input type="date" id="fecha" name="fecha" required><br><br>
+
+      <label for="duracion">Duración (Horas):</label><br>
+      <input type="number" id="duracion" name="duracion" required><br><br>
+
+      <label for="comentarios">Comentarios (opcional):</label><br>
+      <textarea id="comentarios" name="comentarios"></textarea><br><br>
+
+      <button type="submit">Guardar</button>
+      <button type="button" onclick="cerrarModal()">Cancelar</button>
+    </form>
+  </div>
+</div>
+
+</section>
+
+<section class="historial">
+  <div class="historial_container">
+    <h2>HISTORIAL</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>FECHA</th>
+          <th>DURACION</th>
+          <th>EJERCICIO</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+
+
+   <p><b>Ejercicio más frecuente este mes:</b> <span id="favorito">N/A</span></p>
+   <p><b>Sesiones total este mes:</b> <span id="sesiones">0</span></p>
+</section>
+
+
+
+</main>
+
+
+<section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h2 class="footer-logo">CHANCHIS</h2>
+      <ul class="footer-links">
+        <li><a href="#">Detalles que enamoran y sorprenden. Anchetas para cada ocasión especial.</a></li>
+        <li><a href="#">Medellín, Colombia</a></li>
+        <li><a href="#">Términos y Condiciones</a></li>
+        <li><a href="#">Contáctanos</a></li>
+        <li><a href="#">Política de Bioseguridad</a></li>
+      </ul>
+      <p class="footer-contact">
+        ¿Tienes dudas o quieres personalizar tu regalo?
+        <br />
+        <i class="fas fa-envelope"></i> contacto@chanchisregalos.com
+      </p>
+      <p class="footer-contact">
+        +57 310 000 1234
+      </p>
+    </div>
+
+    <div class="footer-column social">
+      <h4>¡Síguenos en redes y descubre nuevas anchetas!</h4>
+      <div class="social-icons">
+        <i class="fab fa-tiktok"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+
+      <hr />
+
+      <h4>Próximamente: nuestra app para pedidos rápidos</h4>
+      <div class="store-icons">
+        <i class="fab fa-apple"></i>
+        <i class="fab fa-google-play"></i>
+      </div>
+    </div>
+  </div>
+</footer>
+</section>
+ 
+
+  <script src="registro.js"></script>
+
+</body>
+</html>

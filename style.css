@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: auto;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.main-head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 54px;
+    background: transparent;
+    z-index: 9999;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.main-head.slidedown {
+    position: fixed;
+    background: #fcd4d8; 
+    animation: slidedown .3s forwards;
+}
+@keyframes slidedown{
+    from{
+        top: -250px;
+    }
+    to{
+        top: 0;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+.main-head .main-menu{
+    width: 100%;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-head .main-menu .logo{
+    width: 30%;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+}
+.main-head .main-menu .nav-menu{
+    width: 70%;
+}
+.main-head .main-menu .nav-menu .nav-list{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.main-head .main-menu .nav-menu .nav-list .nav-list-item{
+    padding: 15px 30px;
+    list-style: none;
+}
+.main-head .main-menu .nav-menu .nav-list .nav-list-item .nav-link{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 20px;
+    font-weight: 500;
+    transition: all .1s ease;
+}
+.main-head.slidedown .main-menu .nav-menu .nav-list .nav-list-item .nav-link {
+    color: white;
+}
+.main-head .main-menu .nav-menu .nav-list .nav-list-item .nav-link:hover{
+    color: rgb(0, 0, 0);
+}
+.main-head.slidedown .main-menu .logo{
+    color: white;
+}
+.main-head .main-menu .toggle-btn{
+    display: none;
+}
+.showcase{
+    width: 100%;
+    height: 885px;
+    background: url('./pictures/banner.gif') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.showcase .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.showcase .content{
+    text-align: center;
+    padding: 0 200px 0 200px;
+    color: #fff;
+}
+.showcase .content h2{
+    font-size: 45px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    line-height: 55px;
+    margin-bottom: 10px;
+}
+.showcase .content p{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+.showcase .content .btn{
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    background: transparent;
+    color: #fff;
+    padding: 11px 18px;
+    border: 2px solid #524797;
+    border-radius: 5px;
+    transition: all .3s linear;
+}
+.showcase .content .btn:hover{
+    background: #524797;
+}
+.demo-text{
+    width: 100%;
+    padding: 80px 0 80px 0;
+}
+.demo-text .container{
+    display: flex;
+    justify-content: center;
+}
+.demo-text .container .content, .demo-text .container .img{
+    width: 50%;
+}
+.demo-text .container .img img{
+    width: 100%;
+}
+.demo-text .container .content{
+    padding: 80px 40px;
+}
+.demo-text .content h2{
+    font-size: 45px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    line-height: 55px;
+    margin-bottom: 10px;
+}
+.demo-text .content p{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.carousel-pure-css {
+  width: 80%;
+  max-width: 700px;
+  margin: 40px auto;
+  position: relative;
+}
+
+.carousel-slides {
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: none;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#item-1:checked ~ .carousel-slides #slide1,
+#item-2:checked ~ .carousel-slides #slide2,
+#item-3:checked ~ .carousel-slides #slide3 {
+  display: block;
+}
+
+.nav-arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.arrow {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 15px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+  user-select: none;
+  transition: background 0.3s;
+}
+
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.carousel-pure-css input[type="radio"] {
+  display: none;
+}
+
+.footer {
+  background-color: #0a1c1c;
+  color: white;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 300px;
+  margin: 20px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.footer-links li {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-text,
+.footer-contact {
+  font-size: 14px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.social {
+  text-align: center;
+}
+
+.social-icons i,
+.store-icons i {
+  font-size: 24px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+hr {
+  margin: 20px auto;
+  width: 60%;
+  border: 0.5px solid #ffffff30;
+}
